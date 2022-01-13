@@ -6,31 +6,31 @@ import React from "react";
 function App() {
   const movienames = [
     {
-      name : "interstellar",
+      name : "Interstellar",
   poster : "https://tse3.mm.bing.net/th?id=OIP.whNlFWQEy6jWw2N1Wc8wHAHaLk&pid=Api&P=0&w=118&h=184",
   ratings : 8.6,
   summary : `As mankind's time on Earth comes to an end, a group of explorers (Matthew McConaughey, Anne Hathaway) begins the most important mission in human history: traveling beyond the galaxy to discover if there is a future for man among the stars.`
     },
     {
-      name : "bahubali",
+      name : "Bahubali",
   poster : "https://tse4.mm.bing.net/th?id=OIP.K9a3eHMDAQvc6-Cka4X0bgHaEK&pid=Api&P=0&w=346&h=194",
   ratings : 8.3,
   summary : `In the kingdom of Mahishmati, while pursuing his love, Shivudu learns about the conflict ridden past of his family and his legacy.`
     },
     {
-      name : "my love from the star",
+      name : "My love from the star",
   poster : "https://6.vikiplatform.com/image/3555c1be8b674894a2fbc24534e789e6.jpeg?x=b",
   ratings : 9.6,
   summary : `As mankind's time on Earth comes to an end, a group of explorers (Matthew McConaughey, Anne Hathaway) begins the most important mission in human history: traveling beyond the galaxy to discover if there is a future for man among the stars.`
     },
     {
-      name : "coco",
+      name : "Coco",
   poster : "https://tse4.mm.bing.net/th?id=OIP.QoTRWtt8zLYgb1MMq-baLgHaEK&pid=Api&P=0&w=339&h=191",
   ratings : 9.3,
   summary : `Accompanied by a charming trickster, a young musician embarks on an extraordinary journey through the colorful Land of the Dead to unlock the real story behind his family's history. `
     },
     {
-      name : "moana",
+      name : "Moana",
   poster : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT46DTO5UY_D4pJf_SsteJkHlvz0IW3aOhuVg&usqp=CAU",
   ratings : 9.0,
   summary : `Moana, daughter of chief Tui, embarks on a journey to return the heart of goddess Te Fitti from Maui, a demigod`
@@ -67,10 +67,11 @@ function Movies({name,poster,ratings,summary})
      <img className="movie-poster" src={poster} alt={name}></img>
      <div className="movie-specs">
      <h3>{name}</h3>
-     <Counter/>
+     
      <p className="movie-ratings">⭐{ratings}</p>
      </div>
      <p>{summary}</p>
+     <Counter/>
     </div>
   )
 

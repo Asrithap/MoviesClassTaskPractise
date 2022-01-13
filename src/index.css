@@ -16,11 +16,12 @@ code {
 .movie-container
 {
    width : 300px;
+   text-align: left;
    /* height : 100vh;
   display : flex;
   flex-direction: column;
   object-fit: cover; */
-  /* padding : 20px; */
+  /* padding : 10px; */
   /* background-color: aqua; */
   /* gap : 20px; */
 } 
