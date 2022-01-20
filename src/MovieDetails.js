@@ -25,7 +25,7 @@ export function MovieDetails({ name, poster, rating, summary,id })
           <div className="movie-specs">
             <h3 className="movie-name">
               {name}
-                <IconButton onClick={()=>history.push("/movies/"+id)} color ="primary" aria-label="Movie Details"> 
+                <IconButton onClick={()=>history.push("/movies"+id)} color ="primary" aria-label="Movie Details"> 
                   <InfoIcon/> 
                 </IconButton>
                 <IconButton className="movie-show-button" onClick={() => setShow(!show)} color="primary" aria-label= {show ? "Hide" : "Show"}>

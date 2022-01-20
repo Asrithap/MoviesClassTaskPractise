@@ -88,7 +88,7 @@ function App() {
           <AddMovies Movies={Movies} setMovies = {setMovies} />
         </Route>
 
-          <Route path="/movies/:id">
+          <Route path="/movies:id">
             <ExtraMovieDetails Movies={Movies}/>
           </Route>
         
