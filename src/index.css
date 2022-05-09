@@ -13,6 +13,15 @@ code {
 } */
 
 
+
+
+.completeview
+{
+  display: flex;
+  flex-direction: column;
+}
+
+
 .movie-container
 {
    width : 300px;

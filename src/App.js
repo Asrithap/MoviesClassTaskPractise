@@ -2,9 +2,10 @@ import "./App.css";
 import React from "react";
 import { ColorList } from "./ColorList";
 import { MoviesList } from "./MoviesList";
-import { Link, Switch, Route,Redirect, useParams} from "react-router-dom";
+import { Link, Switch, Route,Redirect, useParams,useHistory} from "react-router-dom";
 import {AddMovies} from "./AddMovies";
 import { useState } from "react";
+import Button from '@mui/material/Button';
 
   
 function App() {
@@ -49,14 +50,18 @@ function App() {
       ];
     
       const [Movies, setMovies] = useState(Initial_movies);
+      const history = useHistory();
+      
       
   return (
     <div className="App">
       {/* <Counter/> */}
       {/* <ColorList/> */}
       {/* <React_Router/> */}
+      <Button variant="contained" className="Back_Button" onClick={()=> history.goBack()}>Back</Button>
+      <Button variant="contained" className="Forward_Button" onClick={()=> history.goForward()}>Forward</Button>
       <nav>
-        <ul>
+        <ul >
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -68,6 +73,12 @@ function App() {
           </li>
           <li>
             <Link to="/color-game">Color Game</Link>
+          </li>
+          <li>
+            <Link to="/back">Back</Link>
+          </li>
+          <li>
+            <Link to="/forward">Forward</Link>
           </li>
         </ul>
       </nav>
@@ -94,6 +105,12 @@ function App() {
         
         <Route path="/color-game">
           <ColorList />
+        </Route>
+        <Route path="/back">
+          < BackButton/>
+        </Route>
+        <Route path="/forward">
+          <ForwardButton />
         </Route>
         <Route path="**">
           <PageNotFound />
@@ -142,5 +159,26 @@ function ExtraMovieDetails({Movies})
     </div>
   )
 }
+
+
+
+// function BackButton()
+// {
+//   return(
+//     <Button variant="contained" className="Back_Button" onClick={()=> history.goBack()}>Back</Button>
+    
+//   )
+// }
+
+
+
+// function ForwardButton()
+// {
+  
+//   return(
+//     <Button variant="contained" className="Forward_Button" onClick={()=> history.goForward()}>Forward</Button>
+    
+//   )
+// }
 
 export default App;

@@ -16,6 +16,7 @@ export function MovieDetails({ name, poster, rating, summary,id })
   //Conditional styling
   const styles = { display: show ? "block" : "none" };
   const history = useHistory(); //another hook similar to useState
+  
 
   return (
     <Card className="movie-container">
@@ -40,6 +41,7 @@ export function MovieDetails({ name, poster, rating, summary,id })
 
           {/* Conditinal Rendering */}
           {/* {show ? <p>{summary}</p> : ""}; */}
+    
 
         </CardContent>
         <CardActions>
